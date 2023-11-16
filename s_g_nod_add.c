@@ -19,7 +19,7 @@ void nod_add(stack_t **hd, int n)
 	if (auxi)
 		auxi->prev = newnode;
 	newnode->n = n;
-	newnode->next = *head;
+	newnode->next = *hd;
 	newnode->prev = NULL;
 	*hd = newnode;
 }
