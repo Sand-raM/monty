@@ -21,29 +21,29 @@ void s_g_queue(stack_t **hd, unsigned int num_ln)
 */
 void queue_add(stack_t **hd, int n)
 {
-	stack_t *newnode, *auxi;
+	stack_t *new_node, *aux;
 
-	auxi = *hd;
-	newnode = malloc(sizeof(stack_t));
-	if (newnode == NULL)
+	aux = *hd;
+	new_node = malloc(sizeof(stack_t));
+	if (new_node == NULL)
 	{
 		printf("Error\n");
 	}
-	newnode->n = n;
-	newnode->next = NULL;
-	if (auxi)
+	new_node->n = n;
+	new_node->next = NULL;
+	if (aux)
 	{
-		while (auxi->next)
-			auxi = auxi->next;
+		while (aux->next)
+			aux = aux->next;
 	}
-	if (!auxi)
+	if (!aux)
 	{
-		*hd = newnode;
-		newnode->prev = NULL;
+		*hd = new_node;
+		new_node->prev = NULL;
 	}
 	else
 	{
-		auxi->next = newnode;
-		newnode->prev = auxi;
+		aux->next = new_node;
+		new_node->prev = aux;
 	}
 }
