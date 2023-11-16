@@ -38,12 +38,12 @@ void queue_add(stack_t **hd, int n)
 	}
 	if (!auxi)
 	{
-		*head = newnode;
+		*hd = newnode;
 		newnode->prev = NULL;
 	}
 	else
 	{
-		aux->next = newnode;
+		auxi->next = newnode;
 		newnode->prev = auxi;
 	}
 }
